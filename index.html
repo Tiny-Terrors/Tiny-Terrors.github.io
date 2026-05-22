@@ -8,75 +8,264 @@
   <style>
    <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
-  background-color: #1a1410;
-  color: #f2e6d8;
+  background:
+    linear-gradient(rgba(8,6,5,0.92), rgba(8,6,5,0.96)),
+    url('industrial.jpg') center/cover fixed;
+
+  background-color: #120d0a;
+
+  color: #e7d8c7;
+
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.7;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.5px;
 }
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  padding: 30px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1000;
+
+  background: rgba(10,8,7,0.35);
+
+  backdrop-filter: blur(6px);
+}
+
+nav a {
+  color: #c9b19a;
+
+  text-decoration: none;
+
+  margin-right: 35px;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f0d5b5;
+}
+
+/* HEADER */
 
 header {
   height: 100vh;
-  background:
-    linear-gradient(rgba(20,15,10,0.6), rgba(20,15,10,0.8)),
-    url('band.jpg') center/cover;
-    
+
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
+
   text-align: center;
-  padding: 20px;
+
+  padding: 40px;
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 5rem;
-  letter-spacing: 8px;
-  margin-bottom: 10px;
-  color: #d6b38a;
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 7rem;
+
+  font-weight: 300;
+
+  line-height: 0.9;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+
+  color: #d8b28b;
+
+  margin-bottom: 30px;
+
+  text-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 header p {
-  font-size: 1.3rem;
-  color: #c8b29a;
+  font-size: 1rem;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+
+  color: #b89d84;
+
+  margin-bottom: 40px;
 }
 
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 100px 30px;
-}
-
-h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
-  color: #d6b38a;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-}
+/* BUTTON */
 
 .button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 34px;
-  border: 1px solid #b08b62;
-  color: #f2e6d8;
+  border: 1px solid #8e6f55;
+
+  padding: 16px 42px;
+
   text-decoration: none;
-  transition: 0.3s;
-  letter-spacing: 2px;
+
+  color: #d8b28b;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  font-size: 0.8rem;
+
+  transition: 0.4s;
 }
 
 .button:hover {
-  background: #b08b62;
+  background: #d8b28b;
+
   color: black;
 }
 
+/* CONTENT */
+
+section {
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 140px 40px;
+
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3rem;
+
+  font-weight: 300;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: #d8b28b;
+
+  margin-bottom: 40px;
+}
+
 p {
-  color: #d8c8b8;
+  max-width: 700px;
+
+  color: #d0c1b3;
+
+  font-size: 1rem;
+}
+
+/* TOUR DATES */
+
+.tour-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+
+  color: #bfa792;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 1px;
+}
+
+/* IMAGE SECTION */
+
+.band-image {
+  width: 100%;
+
+  margin-top: 60px;
+
+  filter: brightness(75%) contrast(105%);
+
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 80px 20px;
+
+  color: #7d6856;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 20px;
+  }
+
+  nav a {
+    margin-right: 15px;
+
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+
+    letter-spacing: 5px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 100px 25px;
+  }
+
+  .tour-item {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
 }
 
 </style>
