@@ -7,7 +7,7 @@
 
   <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@200;300;400&display=swap');
 
 * {
   margin: 0;
@@ -20,269 +20,167 @@ html {
 }
 
 body {
-
   background:
-    linear-gradient(rgba(7,5,4,0.88), rgba(7,5,4,0.94)),
+    linear-gradient(rgba(7,5,4,0.88), rgba(7,5,4,0.95)),
     url('industrial.jpg') center/cover fixed;
 
   background-color: #120d0a;
-
   color: #e7d8c7;
-
   font-family: 'Montserrat', sans-serif;
-
   font-weight: 300;
-
   line-height: 1.8;
-
   letter-spacing: 0.4px;
-
 }
 
 /* NAVIGATION */
 
 nav {
-
   position: fixed;
-
   width: 100%;
-
   top: 0;
-
   padding: 30px 60px;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   z-index: 1000;
-
-  background: rgba(10,8,7,0.22);
-
-  backdrop-filter: blur(4px);
-
+  background: rgba(10,8,7,0.28);
+  backdrop-filter: blur(5px);
 }
 
 nav a {
-
   color: #b79b81;
-
   text-decoration: none;
-
   margin-right: 35px;
-
-  font-size: 0.8rem;
-
+  font-size: 0.78rem;
   letter-spacing: 3px;
-
   text-transform: uppercase;
-
   transition: 0.3s;
-
 }
 
 nav a:hover {
-
   color: #f0d5b5;
-
 }
 
 /* HEADER */
 
 header {
-
   height: 100vh;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   text-align: center;
-
   padding: 40px;
-
 }
 
 h1 {
-
-  font-family: 'Bebas Neue', sans-serif;
-
-  font-size: 9rem;
-
-  line-height: 0.9;
-
-  letter-spacing: 8px;
-
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: 4px;
   text-transform: uppercase;
-
-  color: #cda47d;
-
+  color: #cfac86;
   margin-bottom: 25px;
 
   text-shadow:
-    0 0 10px rgba(0,0,0,0.9),
-    0 0 30px rgba(0,0,0,0.7);
-
+    0 0 8px rgba(0,0,0,0.95),
+    0 0 30px rgba(0,0,0,0.8);
 }
 
 header p {
-
-  font-size: 0.9rem;
-
+  font-size: 0.92rem;
   letter-spacing: 6px;
-
   text-transform: uppercase;
-
   color: #a88a70;
-
   margin-bottom: 45px;
-
 }
 
 /* BUTTON */
 
 .button {
-
   border: 1px solid #7e6148;
-
   padding: 16px 42px;
-
   text-decoration: none;
-
   color: #d6b08b;
-
   letter-spacing: 4px;
-
   text-transform: uppercase;
-
   font-size: 0.8rem;
-
   transition: 0.4s;
-
 }
 
 .button:hover {
-
   background: #cda47d;
-
   color: black;
-
 }
 
 /* CONTENT */
 
 section {
-
   max-width: 1100px;
-
   margin: auto;
-
   padding: 140px 40px;
-
-  border-top: 1px solid rgba(255,255,255,0.04);
-
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 h2 {
-
-  font-family: 'Bebas Neue', sans-serif;
-
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3rem;
-
-  letter-spacing: 5px;
-
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
-
-  color: #cda47d;
-
+  color: #cfac86;
   margin-bottom: 35px;
-
 }
 
 p {
-
   max-width: 700px;
-
   color: #d0c1b3;
-
   font-size: 1rem;
-
 }
 
 /* TOUR DATES */
 
 .tour-item {
-
   display: flex;
-
   justify-content: space-between;
-
   padding: 22px 0;
-
   border-bottom: 1px solid rgba(255,255,255,0.05);
-
   color: #bfa792;
-
   font-size: 0.95rem;
-
   letter-spacing: 1px;
-
 }
 
 /* BAND IMAGE */
 
 .band-image {
-
   width: 100%;
-
   margin-top: 60px;
-
   filter: brightness(72%) contrast(108%);
-
   border: 1px solid rgba(255,255,255,0.05);
-
 }
 
 /* FOOTER */
 
 footer {
-
   text-align: center;
-
   padding: 80px 20px;
-
   color: #7d6856;
-
   font-size: 0.8rem;
-
   letter-spacing: 2px;
-
 }
 
-/* CINEMATIC OVERLAY */
+/* ATMOSPHERE */
 
 body::before {
-
   content: "";
-
   position: fixed;
-
   inset: 0;
-
   background:
     radial-gradient(circle at top left, rgba(255,180,120,0.05), transparent 40%),
     radial-gradient(circle at bottom right, rgba(255,140,80,0.03), transparent 40%);
-
   pointer-events: none;
-
   z-index: -1;
-
 }
 
 /* MOBILE */
@@ -290,45 +188,30 @@ body::before {
 @media (max-width: 768px) {
 
   nav {
-
     padding: 20px;
-
   }
 
   nav a {
-
     margin-right: 15px;
-
     font-size: 0.68rem;
-
   }
 
   h1 {
-
-    font-size: 5rem;
-
-    letter-spacing: 4px;
-
+    font-size: 4.5rem;
+    letter-spacing: 2px;
   }
 
   h2 {
-
     font-size: 2.2rem;
-
   }
 
   section {
-
     padding: 100px 25px;
-
   }
 
   .tour-item {
-
     flex-direction: column;
-
     gap: 5px;
-
   }
 
 }
