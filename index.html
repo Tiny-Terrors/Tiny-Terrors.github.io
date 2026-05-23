@@ -6,7 +6,10 @@
   <title>Meine Rockband</title>
 
   <style>
-
+@font-face {
+  font-family: 'Grooved';
+  src: url('GroovedPersonalUseRegular-9Y350.ttf') format('truetype');
+}
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Montserrat:wght@300;400&display=swap');
 
 *{
@@ -136,16 +139,17 @@ header{
 /* MAIN TITLE */
 
 h1 {
-  font-family: 'Rubik Dirt', sans-serif;
-  font-size: 6.5rem;
-  line-height: 0.9;
-  letter-spacing: 6px;
+  font-family: 'Grooved', serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #f2f6f8;
+  color: #f4f4f4;
+  text-align: center;
+  margin: 0;
   text-shadow:
-    0 0 10px rgba(160,220,255,0.35),
-    0 0 28px rgba(80,150,200,0.25);
-  margin-bottom: 20px;
+    0 0 10px rgba(170,220,255,.25),
+    0 0 28px rgba(90,150,210,.18);
 }
 
 /* SUBTITLE UNDER LOGO */
