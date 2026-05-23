@@ -513,18 +513,49 @@ footer{
   }
 }
 
-    
+ /* FADE IN */
+
+.fade-in{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1.2s ease forwards;
+}
+
+.fade-delay-1{
+  animation-delay:.25s;
+}
+
+.fade-delay-2{
+  animation-delay:.55s;
+}
+
+.fade-delay-3{
+  animation-delay:.85s;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}   
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo-area">
+  <div class="logo-area fade-in">
 
   <img class="glass-bg" src="glasscherben_freigestellt.png" alt="">
 
-  <div class="logo-text">
+  <div class="logo-text fade-in fade-delay-1">
     <h1>TINY<br>TERRORS</h1>
     <p>Hardrock | Heavy Metal | Coverband</p>
   </div>
@@ -536,7 +567,7 @@ footer{
   </a>
 </header>
 
-<section id="about">
+<section id="about" class="fade-in fade-delay-2">
 
 <h2>WE LOVE TO ROCK ‘N’ ROLL</h2>
 
@@ -556,7 +587,7 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
 
 </section>
 
-  <section id="gallery">
+  <section id="gallery" class="fade-in fade-delay-3">
 
 <h2>LIVE IMPRESSIONS</h2>
 
