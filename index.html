@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meine Rockband</title>
+  
 #gallery{
   max-width:1400px;
 }
@@ -17,11 +18,12 @@
 }
 
 .gallery-scroll img{
-  width:380px;
-  height:255px;
+  width:380px !important;
+  height:255px !important;
   object-fit:cover;
   object-position:center;
   flex:0 0 380px;
+  max-width:none !important;
   border-radius:6px;
   display:block;
   filter:brightness(.82) contrast(1.05);
@@ -31,15 +33,6 @@
 .gallery-scroll img:hover{
   transform:scale(1.03);
   filter:brightness(.95) contrast(1.08);
-}
-
-.gallery-scroll::-webkit-scrollbar{
-  height:8px;
-}
-
-.gallery-scroll::-webkit-scrollbar-thumb{
-  background:rgba(180,180,180,.25);
-  border-radius:20px;
 }
   <style>
 @font-face {
