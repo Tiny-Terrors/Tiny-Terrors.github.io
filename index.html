@@ -352,17 +352,23 @@ footer{
     gap:5px;
   }
 }
-
+.logo{
+  width:min(700px,85vw);
+  max-height:320px;
+  object-fit:contain;
+  display:block;
+  margin:auto;
+  filter:
+    drop-shadow(0 0 12px rgba(160,210,255,.20))
+    drop-shadow(0 0 28px rgba(120,180,220,.20));
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo-wrap">
-  <img class="glass" src="Logotrans2.png" alt="">
-  <img class="logo" src="Logoweiss.pdf" alt="Tiny Terrors">
-</div>
+  <img class="logo" src="logo.png" alt="Tiny Terrors">
   <p>Rock Cover • Live • Energie</p>
 
   <a class="button" href="#kontakt">
