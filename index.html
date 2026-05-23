@@ -364,16 +364,51 @@ footer{
     drop-shadow(0 0 12px rgba(160,210,255,.20))
     drop-shadow(0 0 28px rgba(120,180,220,.20));
 }
+
+    .logo-area{
+  position:relative;
+  width:min(900px,92vw);
+  min-height:340px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+}
+
+.glass-bg{
+  position:absolute;
+  width:85%;
+  max-width:760px;
+  opacity:.42;
+  z-index:1;
+  pointer-events:none;
+  filter:
+    brightness(.95)
+    drop-shadow(0 0 14px rgba(120,190,230,.18));
+}
+
+.logo-text{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>TINY<br>TERRORS</h1>
-<p>Hardrock | Heavy Metal | Coverband</p>
-  
+  <div class="logo-area">
 
+  <img class="glass-bg" src="glasscherben_freigestellt.png" alt="">
+
+  <div class="logo-text">
+    <h1>TINY<br>TERRORS</h1>
+    <p>Hardrock | Heavy Metal | Coverband</p>
+  </div>
+
+</div>
+  
   <a class="button" href="#kontakt">
     Booking anfragen
   </a>
