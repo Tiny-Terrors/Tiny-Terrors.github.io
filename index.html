@@ -544,7 +544,33 @@ footer{
     opacity:1;
     transform:translateY(0);
   }
-}   
+} 
+
+#booking{
+  text-align:center;
+}
+
+#booking p{
+  margin:0 auto 35px;
+}
+
+.tour-item{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  font-size:1.15rem;
+  letter-spacing:1px;
+}
+
+@media(max-width:768px){
+  .tour-item{
+    flex-direction:column;
+    gap:4px;
+  }
+}
+  
 </style>
 </head>
   
