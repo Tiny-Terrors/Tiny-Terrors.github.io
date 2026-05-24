@@ -682,59 +682,40 @@ footer{
 }
 
 .concert-list{
-  margin-top:35px;
+  margin-top:25px;
 }
 
 .concert-item{
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  gap:30px;
-
-  padding:22px 0;
-
-  border-bottom:
-    1px solid rgba(255,255,255,.10);
-
-  transition:.3s;
+  gap:25px;
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
 }
 
-.concert-item:hover{
-
-  border-color:
-    rgba(120,190,230,.30);
+.concert-item:first-child{
+  border-top:1px solid rgba(255,255,255,.18);
 }
 
 .concert-date{
-
   font-family:'Cormorant Garamond', serif;
-
-  font-size:1.2rem;
-
+  font-size:1.15rem;
   color:#f4f4f4;
-
-  letter-spacing:1px;
 }
 
 .concert-place{
-
   font-family:'Cormorant Garamond', serif;
-
-  font-size:1.15rem;
-
-  color:#bfc7cf;
-
+  font-size:1.1rem;
+  color:#c4ccd4;
   text-align:right;
 }
 
 @media(max-width:768px){
-
   .concert-item{
     flex-direction:column;
     align-items:flex-start;
-    gap:6px;
+    gap:5px;
   }
 
   .concert-place{
@@ -805,11 +786,24 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
 
 </section>
 
-<section>
+<section id="concerts">
+
   <h2>KONZERTE</h2>
 
-  <p>12.06.2026 — München</p>
-  <p>28.06.2026 — Augsburg</p>
+  <div class="concert-list">
+
+    <div class="concert-item">
+      <span class="concert-date">01.08.2026</span>
+      <span class="concert-place">Roody München</span>
+    </div>
+
+    <div class="concert-item">
+      <span class="concert-date">21.11.2026</span>
+      <span class="concert-place">Country Gringos Moosinning</span>
+    </div>
+
+  </div>
+
 </section>
 
 <section id="kontakt">
