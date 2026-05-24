@@ -680,6 +680,67 @@ footer{
   height:100%;
   display:block;
 }
+
+.concert-list{
+  margin-top:35px;
+}
+
+.concert-item{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:30px;
+
+  padding:22px 0;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.10);
+
+  transition:.3s;
+}
+
+.concert-item:hover{
+
+  border-color:
+    rgba(120,190,230,.30);
+}
+
+.concert-date{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:1.2rem;
+
+  color:#f4f4f4;
+
+  letter-spacing:1px;
+}
+
+.concert-place{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:1.15rem;
+
+  color:#bfc7cf;
+
+  text-align:right;
+}
+
+@media(max-width:768px){
+
+  .concert-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+
+  .concert-place{
+    text-align:left;
+  }
+}
   
 </style>
 </head>
