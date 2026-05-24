@@ -455,6 +455,7 @@ nav a{
     0 0 10px rgba(0,0,0,.45);
 }
 
+
  #gallery{
   max-width:1400px;
 }
@@ -547,7 +548,44 @@ nav a{
 
   backdrop-filter:blur(8px);
 }
+.nav-left{
 
+  gap:10px !important;
+
+  flex-wrap:nowrap;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+}
+
+.nav-left::-webkit-scrollbar{
+  display:none;
+}
+
+nav a{
+
+  font-size:.72rem !important;
+
+  letter-spacing:.7px !important;
+
+  margin-right:0 !important;
+
+  white-space:nowrap;
+
+  color:#b89b7f !important;
+}
+
+.nav-right{
+
+  gap:10px !important;
+
+  margin-left:12px;
+}
+
+.nav-right a{
+  font-size:.9rem !important;
+}
   header{
     min-height:72vh !important;
     height:auto !important;
