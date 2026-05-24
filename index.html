@@ -460,31 +460,41 @@ nav a{
   filter:brightness(.95) contrast(1.08);
 }
 
+.gallery-wrap{
+  position:relative;
+}
+
+.gallery-controls{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:18px;
+}
+
 .gallery-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:10;
-  background:none;
+
+  background:rgba(0,0,0,.28);
+
   border:none;
-  color:rgba(255,255,255,.62);
-  font-size:2rem;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:1.7rem;
+
+  width:46px;
+  height:46px;
+
+  border-radius:24px;
+
   cursor:pointer;
+
   transition:.3s;
 }
 
 .gallery-btn:hover{
   color:#b7dfff;
+  background:rgba(120,190,230,.10);
 }
-
-.prev{
-  left:-18px;
-}
-
-.next{
-  right:-18px;
-}
-
 @media (max-width: 768px){
 
   nav{
@@ -966,7 +976,6 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
 
 <div class="gallery-wrap">
 
-  <button class="gallery-btn prev">&#10094;</button>
   <div class="gallery-scroll" id="galleryScroll">
   
   <img src="band1.JPEG" alt="">
@@ -979,9 +988,12 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
   <img src="band8.JPG" alt="">
   <img src="band9.JPG" alt="">
   <img src="band10.jpg" alt="">
+  </div>
 
-  <button class="gallery-btn next">&#10095;</button>
-
+  <div class="gallery-controls">
+    <button class="gallery-btn prev">&#10094;</button>
+    <button class="gallery-btn next">&#10095;</button>
+  </div>
 </div>
 
 </section>
