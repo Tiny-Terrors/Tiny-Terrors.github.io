@@ -994,6 +994,56 @@ nav a:hover{
 .contact-mail a:hover{
   color:#b7dfff;
 }
+
+.menu-toggle{
+  display:none;
+}
+
+@media(max-width:768px){
+
+  nav{
+    padding:12px 18px !important;
+    justify-content:flex-end !important;
+    background:transparent !important;
+    backdrop-filter:none !important;
+  }
+
+  .menu-toggle{
+    display:block;
+    background:none;
+    border:none;
+    color:#b89b7f;
+    font-size:2rem;
+    cursor:pointer;
+    z-index:2001;
+  }
+
+  .nav-left,
+  .nav-right{
+    display:none !important;
+  }
+
+  body.menu-open .nav-left{
+    display:flex !important;
+    position:fixed;
+    top:0;
+    right:0;
+    width:72vw;
+    height:100vh;
+    background:rgba(7,5,4,.94);
+    backdrop-filter:blur(10px);
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:28px;
+    z-index:2000;
+  }
+
+  body.menu-open .nav-left a{
+    font-size:1.35rem !important;
+    color:#b89b7f !important;
+  }
+}
   
 </style>
 </head>
@@ -1002,7 +1052,9 @@ nav a:hover{
 
 
 <nav>
-
+<button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+  ☰
+</button>
   <div class="nav-left">
     <a href="#home">Home</a>
     <a href="#about">Über uns</a>
