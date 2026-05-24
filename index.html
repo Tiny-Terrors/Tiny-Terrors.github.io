@@ -1048,20 +1048,19 @@ nav a:hover{
 
 @media(max-width:768px){
 
-  .glass-bg{
+  .logo-area.fade-in .glass-bg{
     animation:glassMobileFade 1.4s ease forwards !important;
-    opacity:0;
   }
 
   @keyframes glassMobileFade{
-    from{
-      opacity:0;
-      transform:translate(-51%, -45%);
+    0%{
+      opacity:0 !important;
+      transform:translate(-53%, -45%) !important;
     }
 
-    to{
-      opacity:.24;
-      transform:translate(-53%, -50%);
+    100%{
+      opacity:.24 !important;
+      transform:translate(-53%, -50%) !important;
     }
   }
 }
