@@ -1254,6 +1254,11 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
 
 <div class="gallery-wrap">
 
+<button class="gallery-arrow left"
+onclick="this.parentElement.querySelector('.gallery-scroll').scrollBy({left:-420,behavior:'smooth'})">
+❮
+</button>
+
   <div class="gallery-scroll" id="galleryScroll">
   
   <img src="band1.JPEG" alt="">
@@ -1267,12 +1272,11 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
   <img src="band9.JPG" alt="">
   <img src="band10.jpg" alt="">
   </div>
-
-  <div class="gallery-controls">
-    <button class="gallery-btn prev">&#10094;</button>
-    <button class="gallery-btn next">&#10095;</button>
+<button class="gallery-arrow right"
+onclick="this.parentElement.querySelector('.gallery-scroll').scrollBy({left:420,behavior:'smooth'})">
+❯
+</button>
   </div>
-</div>
 
 </section>
 
