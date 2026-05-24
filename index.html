@@ -421,8 +421,12 @@ nav a{
   text-align:center;
 }
 
-    #gallery{
+ #gallery{
   max-width:1400px;
+}
+
+.gallery-wrap{
+  position:relative;
 }
 
 .gallery-scroll{
@@ -431,6 +435,11 @@ nav a{
   overflow-x:auto;
   padding:20px 0 35px;
   scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+
+.gallery-scroll::-webkit-scrollbar{
+  display:none;
 }
 
 .gallery-scroll img{
@@ -449,6 +458,31 @@ nav a{
 .gallery-scroll img:hover{
   transform:scale(1.03);
   filter:brightness(.95) contrast(1.08);
+}
+
+.gallery-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:10;
+  background:none;
+  border:none;
+  color:rgba(255,255,255,.62);
+  font-size:2rem;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.gallery-btn:hover{
+  color:#b7dfff;
+}
+
+.prev{
+  left:-18px;
+}
+
+.next{
+  right:-18px;
 }
 
 @media (max-width: 768px){
@@ -926,12 +960,15 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
 
 </section>
 
-  <section id="gallery" class="fade-in fade-delay-3">
+ <section id="gallery">
 
 <h2>LIVE IMPRESSIONS</h2>
 
-<div class="gallery-scroll">
+<div class="gallery-wrap">
 
+  <button class="gallery-btn prev">&#10094;</button>
+  <div class="gallery-scroll" id="galleryScroll">
+  
   <img src="band1.JPEG" alt="">
   <img src="band2.JPEG" alt="">
   <img src="band3.JPEG" alt="">
@@ -942,7 +979,9 @@ Energiegeladene Gitarrenriffs, dynamische Rhythmen und pure Rock-Power – TINY 
   <img src="band8.JPG" alt="">
   <img src="band9.JPG" alt="">
   <img src="band10.jpg" alt="">
-  
+
+  <button class="gallery-btn next">&#10095;</button>
+
 </div>
 
 </section>
@@ -1045,6 +1084,24 @@ target="_blank">
 <footer>
   © TINY TERRORS · MUNICH ROCK COVER BAND
 </footer>
+
+<script>
+const gallery = document.getElementById('galleryScroll');
+
+document.querySelector('.next').addEventListener('click', () => {
+  gallery.scrollBy({
+    left: 420,
+    behavior: 'smooth'
+  });
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  gallery.scrollBy({
+    left: -420,
+    behavior: 'smooth'
+  });
+});
+</script>
   
 </body>
 </html>
