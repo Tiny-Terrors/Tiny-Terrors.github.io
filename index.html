@@ -1074,12 +1074,54 @@ nav a:hover{
     padding-top:18px !important;
   }
 }
+.mobile-bg{
+  display:none;
+}
 
+@media(max-width:768px){
+
+  body{
+    background:#120d0a !important;
+  }
+
+  .mobile-bg{
+
+    display:block;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+    background:
+      linear-gradient(
+        rgba(7,5,4,.68),
+        rgba(7,5,4,.86)
+      ),
+      url('Cover1a.png');
+
+    background-size:130% auto;
+    background-position:65% top;
+    background-repeat:no-repeat;
+  }
+
+  header,
+  section{
+    background:transparent !important;
+  }
+}
 </style>
 </head>
 
 <body>
-
+<div class="mobile-bg"></div>
 
 <nav>
 <button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
