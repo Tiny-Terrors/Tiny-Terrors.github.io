@@ -532,8 +532,21 @@ nav a{
 @media (max-width: 768px){
 
   nav{
-    display:none;
-  }
+
+  display:flex !important;
+
+  padding:8px 14px !important;
+
+  min-height:44px;
+
+  background:
+    linear-gradient(
+      rgba(7,5,4,.48),
+      rgba(7,5,4,.08)
+    ) !important;
+
+  backdrop-filter:blur(8px);
+}
 
   header{
     min-height:72vh !important;
