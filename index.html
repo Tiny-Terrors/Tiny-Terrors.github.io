@@ -1173,6 +1173,52 @@ nav a:hover{
     flex:0 0 300px;
   }
 }
+  .gallery-wrap{
+  position:relative;
+}
+
+.gallery-arrow{
+
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  z-index:5;
+
+  width:46px;
+  height:46px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:rgba(0,0,0,.28);
+
+  color:#d8d8d8;
+
+  font-size:1.6rem;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(6px);
+
+  transition:.3s;
+}
+
+.gallery-arrow:hover{
+  background:rgba(0,0,0,.45);
+  color:#fff;
+}
+
+.gallery-arrow.left{
+  left:12px;
+}
+
+.gallery-arrow.right{
+  right:12px;
+}
 </style>
 </head>
 
